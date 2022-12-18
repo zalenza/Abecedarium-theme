@@ -1,17 +1,6 @@
- /*obsdn dark rmx - v202007102000 */
+/*-----Abecedarium-----*/
+/* I used Dark Remix as a starting point: obsdn dark rmx - v202007102000 */
 
-/*@font-face {
-	font-size: 14px;
-	font-family: 'Flow Circular';
-	src: url(public/fonts/edbfed209497891b155c08340fc3e69f.woff);
-	font-display: swap;	
-}*/
-
-/*:root {
-  --content-font-family: "Helvetica Neue", Helvetica, Avenir, Avenir Next, Arial, "Lucida Grande", sans-serif;
-  --content-font-size-normal: 18px;
-  --content-font-family-code: Consolas, monaco, monospace;
-}*/
 :root {
   --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
   --mermaid-font: var(--default-font);
@@ -245,30 +234,6 @@ body {
 
 
 
-
-
-/* ==== Tooltip animation - no animation ==== */
-/*.tooltip {
-  animation: unset !important;
-}
-
-.workspace-tab-header[aria-label="File explorer"]
-  .workspace-tab-header-inner-icon:after,
-.side-dock-ribbon-action[aria-label="Open today's note"]:after,
-.side-dock-ribbon-action[aria-label="Open another vault"]:after,
-.side-dock-ribbon-action[aria-label="Help"]:after,
-.side-dock-ribbon-action[aria-label="Settings"]:after {
-  font-size: 18px;
-}
-*/
-
-
-
-
-
-
-
-
 /*==============TRANSCLUSION TWEAKS=============*/
 .markdown-embed-title {
 	font-family: sans-serif;
@@ -481,24 +446,10 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 }
 
 
-/* color of header/tab icons in sidebars */
-/*.workspace-tab-header.is-active {
-	color: var(--text-accent);
-}*/
-/*.workspace-tab-header:hover {
-	color: var(--text-accent);
-}*/
 .workspace-tab-header.is-active:hover {
 	color: var(--text-accent);
 }
 
-/*.is-focused .workspace-tab-header.is-active {
-    background-color: var(--background-secondary);
-}*/
-/*.mod-root .workspace-tab-header-inner.is-active {
-    padding: 0 3px 0 6px;
-    background-color: var(--background-primary);
-}*/
 
 .workspace-tab-header-container {
     background-color: var(--background-secondary-alt);
@@ -630,16 +581,6 @@ body:not(.is-grabbing) .nav-folder-title:hover {
     /*height : 14px;*/
     /*color : var(--interactive-accent);*/
 }
-
-
-
-/*==== separators =====*/
-/*.workspace-leaf-resize-handle {
-	background-color: var(--background-secondary-alt);
-}
-.workspace-leaf-resize-handle:hover {
-	background-color: rgba(var(--interactive-accent-rgb), .8);
-}*/
 
 
 /* a bit more padding on the left side in preview mode*/
@@ -881,20 +822,6 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 }
 
 
-
-/*=====================================*/
-
-/* Add quotation character before quote */
-/*blockquote:before {
-  font: 14px/20px italic Times, serif;
-  content: "“";
-  font-size: 3em;
-  line-height: 0.1em;
-  vertical-align: -0.4em;
-  color: var(--text-muted);
-}*/
-
-
 /*===================================================================================*/
 
 /*blockquote styling*/
@@ -943,49 +870,10 @@ blockquote p {
 	padding-top: 0px;
 }
 
-/*.markdown-preview-view blockquote:after {
-    content: '\201C';
-    position: absolute;
-    top: 0.30em;
-    left: -0.45em;
-    font-size: 6em;
-}*/
-
-
-/* auto fade note controls*/
-/*.view-header:not(:hover) .view-actions {
-  opacity: 0.5;
-  transition: opacity .25s ease-in-out;
-}*/
 
 .is-mobile .view-header:not(:hover) .view-actions {
   opacity: 1;
 }
-
-/* auto fades status bar items */
-/*.status-bar:not(:hover) .status-bar-item {
-  opacity: 0.2;
-  transition: opacity .25s ease-in-out;
-}*/
-
-
-
-
-
-
-
-
-/*.file-tree-item-header.is-selected {
-	background-color: rgba(var(--interactive-accent-rgb), 0.2);
-}*/
-
-/*.upload-progress-container.is-finished {
-	background-color: rgba(48,209,83, 0.2);
-}*/
-
-/*.file-tree .tree-item-inner:hover {
-	background: rgb(0, 0, 0, .0);
-}*/
 
 
 
@@ -993,10 +881,6 @@ blockquote p {
     position: relative;
     padding-left: 1em;
 }
-
-
-
-
 
 /* obsidian-calendar-plugin */
 /* https://github.com/liamcain/obsidian-calendar-plugin */
@@ -1080,29 +964,6 @@ cite {
 .markdown-preview-view .internal-query.is-embed .search-results-children {
 	max-height: unset;
 }
-
-
-
-
-
-
-
-/*.markdown-preview-view td {
-	font-family: 'Roboto';
-}*/
-
-
-
-/* color the file names of a certain folder in the file explorer */
-/*.nav-folder-title[data-path*="Songs"], 
-.nav-file-title[data-path*="Songs"], 
-.nav-file-title[data-path*="Artists"], 
-.nav-folder-title[data-path*="Artists"] {
-  color: #49A39A;
-} 
-*/
-
-
 
 
 
@@ -1329,17 +1190,6 @@ cite {
 	padding: 0px 6px 0px 20px;
 }
 
-/*.tag-pane-tag-text:before {
-    content: "#";
-    padding-right: 1.3em;
-    position: relative;
-    margin: -1em;
-    color: var(--headers);
-}
-.collapse-icon + .tree-item-inner > .tag-pane-tag-text:before {
-    content: none;
-}*/
-
 /*main leaf borders*/
 .workspace-split.mod-root > .workspace-leaf:first-of-type .workspace-leaf-content, 
 .workspace-split.mod-root > .workspace-leaf:last-of-type .workspace-leaf-content {
@@ -1380,59 +1230,6 @@ cite {
 .sourcenote ul ul {
   margin-left: -20px;
 }
-
-
-/*----Admonition----*/
-/*Regular Text Block*/
-/*.ad {
-    display: block;
-    background: var(--background-primary);
-    color: var(--text-normal);
-    border-left: 4px solid var(--interactive-accent);
-    box-shadow: 5px 5px var(--background-modifier-box-shadow);
-    text-decoration: unset;
-    padding: 0 20px 20px 20px;
-    margin-top: 30px;
-    width: 100%;
-}
-.ad-t + ul {
-    margin-left: -20px;
-    margin-top: unset;
-    padding: 15px 20px 20px 20px;
-    display: block;
-    border-left: 4px solid var(--interactive-accent);
-}
-.ad-t + ul li::marker {
-    color: transparent;
-}*/
-/*Admonition Title*/
-/*.ad-t {
-    text-decoration: unset;
-    margin-left: -20px;
-    font-weight: bold;
-    display: block;
-    border-bottom: 4px solid var(--interactive-accent);
-}
-.ad mark strong {
-    display: block;
-    padding: 10px 20px;
-    background-color: rgba(var(--interactive-accent-rgb), .2);
-    margin: -20px -21px 10px;
-    text-align: left !important;
-    color: var(--text-normal);
-}*/
-
-/*Admonition Title Icon*/
-/*.ad mark strong::before,
-.ad-t::before {
-    content: "🟣";
-    margin-right: 5px;
-    font-weight: 10 !important;
-}
-*/
-
-
-
 
 
 /*Dataview query results numbers*/
@@ -1530,40 +1327,6 @@ body:not(.no-svg-replace) svg.right-triangle {
     width: 12px;
     -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32"><path fill="red" stroke-width="2" stroke="currentColor" d="M16 22L6 12l1.4-1.4l8.6 8.6l8.6-8.6L26 12z"></path></svg>');
 }
-
-/*TAG PANE ICONS - from Yin & Yang*/
-
-/*.tag-pane-tag {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
-.tag-pane-tag-text:before {
-  margin-left: 3px !important;
-  content: "☐";
-  background-color: currentColor;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  background-repeat: no-repeat;
-  background-size: 18px;
-  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="red" d="M66.742 15.896L63.467 33.333h-20.692l2.983 -15.896l-8.183 -1.542L34.3 33.333H16.667v8.333h16.071l-3.129 16.667H12.5v8.333h15.546l-2.975 15.854l8.188 1.538L36.525 66.667h20.692l-2.975 15.854l8.188 1.538l3.263 -17.392H83.333v-8.333h-16.079l3.129 -16.667H87.5V33.333h-15.554l2.983 -15.896l-8.188 -1.542zM58.775 58.333H38.088l3.129 -16.667h20.692l-3.133 16.667z"></path></svg>');
-  font-family: sans-serif;
-  font-size: 14px;
-  padding-right: 5px;
-  position: relative;
-}
-
-.tag-pane-tag > .collapse-icon + .tree-item-inner > .tag-pane-tag-text:before {
-  content: none;
-  margin-left: -5px;
-}
-
-.tag-pane-tag > div.collapse-icon {
-  top: 2px;
-  position: relative;
-  margin-left: -2px !important;
-}*/
 
 /*tag carrot alignment*/
 .tree-item .tree-item-self .tree-item-icon {
