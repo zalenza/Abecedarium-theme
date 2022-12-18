@@ -1,2 +1,2 @@
-# Abecedarium-theme
+# Abecedarium
 Obsidian theme
