@@ -1481,3 +1481,11 @@ body:not(.no-svg-replace) svg.right-triangle {
     padding-left: 36px;
     background-color: var(--background-secondary-alt);
 }
+
+/*change color of checked item in Reading and Live Preview*/
+ul > li.task-list-item[data-task="x"], ul > li.task-list-item[data-task="X"] {
+     color: var(--text-faint);
+}
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"], .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="X"] {
+    color: var(--text-faint);
+}
