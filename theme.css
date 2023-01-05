@@ -1,5 +1,5 @@
 /*-----Abecedarium-----*/
-/* I used Dark Remix as a starting point: obsdn dark rmx - v202007102000 */
+/* I used an early version of Dark Remix as a starting point: obsdn dark rmx - v202007102000 */
 
 :root {
   --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
@@ -1252,7 +1252,7 @@ cite {
 
 /*Dataview query table header line*/
 .table-view-table > thead >tr > th {
-	border: 1px solid var(--text-faint) !important;
+	border-bottom: 1px solid var(--text-faint) !important;
 	/*border-top: 1px solid var(--text-faint) !important;*/
 }
 /*.table-view-table > tbody > tr > td {
@@ -1270,13 +1270,11 @@ cite {
 	/*content: '';*/
 }
 
-
-
 /* table heading color */
-.markdown-preview-view th {
+/*.markdown-preview-view th {
 	background-color: var(--background-primary-alt);
 	border: 0px;
-}
+}*/
 
 
 /*excalidraw theme updates*/
@@ -1455,4 +1453,31 @@ body:not(.no-svg-replace) svg.right-triangle {
 /*backlinks pane link text for not collapsed*/
 .search-result:not(.is-collapsed) .search-result-file-title {
     color: var(--text-accent);
+}
+
+/*===== fix top title =====*/
+.view-header-title {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0px 0px 0px 3px;
+}
+
+.view-header-title-container {
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    justify-content: var(--file-header-justify);
+    display: flex;
+    align-items: center;
+    gap: 0;
+    white-space: nowrap;
+}
+
+/*edit search bar color*/
+.search-input-container input {
+    display: block;
+    width: 100%;
+    padding-right: 28px;
+    padding-left: 36px;
+    background-color: var(--background-secondary-alt);
 }
