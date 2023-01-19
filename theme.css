@@ -23,7 +23,7 @@ body {
 .theme-dark {
 	--opacity-translucency: .8;
 	--background-primary: #131517;   /*#161718*/
-	--background-modifier-border: #303030;
+	--background-modifier-border: #282931;  /*#303030*/
 	--background-primary-alt: #171717; 
 	--background-secondary: #1C1F24;          /*#1E2023*/
 	--background-secondary-alt: #111212;       /*#101010*/
@@ -35,7 +35,7 @@ body {
 	--text-accent-hover-dark: #1052b5; 
 	--text-normal: #ECEDEE; /*#dcddde*/ 
 	--text-muted: #8B959A;        /*#999*/
-	--text-faint: #666;
+	--text-faint: #5D5F67;  /*#666*/
 	--text-error: #ff3333; 
 	--text-error-hover: #990000;
 	--text-on-accent: #dcddde;
@@ -66,7 +66,7 @@ body {
 	--color-purple: #b352e0;
 	--color-purple2: #5252e0;
 	--color-green2: #58aa31;
-
+	--blockquote-background-color: var(--background-secondary);
 }
 /* ======= LIGHT ============== */
 .theme-light {
@@ -117,6 +117,7 @@ body {
 	--graph-node-fill-OP1: #269dff;
 	--graph-node-fill-OP2: #91B8D7;
 	--graph-node-fill-yellow: #ffcf00;
+	--blockquote-background-color: var(--background-primary-alt);
 }
 
 
@@ -415,6 +416,7 @@ body {
 }
 .tree-item-self:hover .tree-item-flair {
 	background-color: var(--text-accent);
+	color: var(--text-normal);	
 }
 
 
@@ -832,6 +834,8 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 	border-right:0px;
 }
 
+
+
 .theme-dark .markdown-preview-view blockquote {
 	background-color: var(--background-secondary);
 	border-top:0px;
@@ -839,6 +843,9 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 	border-right:0px;
 }
 
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+    background-color: var(--blockquote-background-color);
+}
 
 .markdown-preview-view blockquote {
     position: relative;
@@ -863,6 +870,20 @@ blockquote:before {
   	/*color:  var(--graph-node-fill-yellow);*/
   	/*margin: -2.5em;*/
 }
+/*mostly copied from discord - places a quote from a different font*/
+/*.markdown-rendered blockquote::after {
+    content: "“"; 
+    font-size: 3.5em;
+    font-style: normal;
+    font-weight: 700;
+    font-family: "Georgia", serif;
+    opacity: .25;
+    line-height: 0;
+    left: -0.7em;
+    top: 0.67em;
+  	position: absolute;
+    z-index: 1;
+}*/
 
 /* what's inside the blockquote */
 blockquote p { 
@@ -1328,7 +1349,7 @@ body:not(.no-svg-replace) svg.right-triangle {
 
 /*tag carrot alignment*/
 .tree-item .tree-item-self .tree-item-icon {
-    margin-left: -18px;
+    margin-left: -5px !important;
 }
 /*tag pane line height*/
 .tag-pane-tag {
