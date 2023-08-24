@@ -569,7 +569,7 @@ body:not(.is-grabbing) .nav-folder-title:hover {
     background-color: var(--background-secondary-alt);
     line-height: 1.3em;
     border-radius: 3px;
-    /*padding: 2px 4px;*/
+    padding: 1px 4px;
 }
 
 .tree-item-flair-outer {
@@ -1337,6 +1337,7 @@ body:not(.no-svg-replace) .tree-item-self .tree-item-icon > svg.right-triangle {
     height: 11px;
     width: 11px;
     fill: var(--text-muted);
+    margin-left: -22px;
 }
 
 body:not(.no-svg-replace) svg.right-triangle {
