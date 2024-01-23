@@ -833,70 +833,7 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 
 /*===================================================================================*/
 
-/*blockquote styling*/
-.theme-light .markdown-preview-view blockquote {
-	background-color: var(--background-primary-alt);
-	border-top:0px;
-	border-bottom:0px;
-	border-right:0px;
-}
 
-
-
-.theme-dark .markdown-preview-view blockquote {
-	background-color: var(--background-secondary);
-	border-top:0px;
-	border-bottom:0px;
-	border-right:0px;
-}
-
-.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
-    background-color: var(--blockquote-background-color);
-}
-
-.markdown-preview-view blockquote {
-    position: relative;
-    /*margin: 0px;*/
-    /*border:  1px solid var(--graph-node-fill-yellow);*/
-    border-left-width: 3px;
-}
-
-
-
-/* the quotation mark outside the block quote */
-blockquote:before {
-	font-family: "IcoMoon-Free";
-	content: "quotes-left";
-  	font-size: 1.5em;
-  	line-height: 0.1em;
-  	top: 0.9em;
-	left: -1.6em;
-  	position: absolute;
-  	/*vertical-align: 0px;*/
-  	color: var(--background-modifier-border);
-  	/*color:  var(--graph-node-fill-yellow);*/
-  	/*margin: -2.5em;*/
-}
-/*mostly copied from discord - places a quote from a different font*/
-/*.markdown-rendered blockquote::after {
-    content: "“"; 
-    font-size: 3.5em;
-    font-style: normal;
-    font-weight: 700;
-    font-family: "Georgia", serif;
-    opacity: .25;
-    line-height: 0;
-    left: -0.7em;
-    top: 0.67em;
-  	position: absolute;
-    z-index: 1;
-}*/
-
-/* what's inside the blockquote */
-blockquote p { 
-	/*display: inline;*/ 
-	padding-top: 0px;
-}
 
 
 .is-mobile .view-header:not(:hover) .view-actions {
@@ -1344,7 +1281,7 @@ body:not(.no-svg-replace) .tree-item-self .tree-item-icon > svg.right-triangle {
     height: 11px;
     width: 11px;
     fill: var(--text-muted);
-    margin-left: -22px;
+    margin-top: -4px;
 }
 
 body:not(.no-svg-replace) svg.right-triangle {
