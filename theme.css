@@ -24,6 +24,7 @@ body {
     --accent-s: 100%;
     --accent-l: 57%;
     --link-decoration: none;
+    --background-modifier-hover: var(--background-secondary);
 }
 
 /* ======= DARK ============== */
@@ -75,6 +76,7 @@ body {
 	--color-green2: #58aa31;
 	--blockquote-background-color: var(--background-secondary);
 }
+
 /* ======= LIGHT ============== */
 .theme-light {
 
@@ -364,7 +366,7 @@ body {
     padding-bottom: 0px;
     border-bottom: 1px solid var(--background-modifier-border);
     margin-bottom: 2px;
-
+    padding-left: .5em;
     flex-wrap: wrap;
 }
 
@@ -513,7 +515,8 @@ body:not(.is-grabbing) .nav-folder-title:hover {
   padding-left: 6px;
   font-size: 14px; 
   /*font-weight: bolder;*/
-  top: -4px;
+  top: -.25em;
+  padding-top: 0.5em;
   cursor: default;
   /*justify-content: center;*/
 }
@@ -1357,13 +1360,14 @@ body:not(.no-svg-replace) svg.right-triangle {
     padding-left: 0px
 }
 
-.nav-buttons-container {
+.nav-buttons-container { /*this also affects the buttons in the file browser sidebar*/
     display: flex;
     justify-content: left;
     padding-bottom: 10px;
     padding-top: 5px;
     border-bottom: 1px solid var(--background-modifier-border);
     margin-bottom: 2px;
+    padding-left: .5em;
     flex-wrap: wrap;
 }
 
