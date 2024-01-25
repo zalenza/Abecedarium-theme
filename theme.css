@@ -1387,7 +1387,7 @@ body:not(.no-svg-replace) svg.right-triangle {
 /*file explorer folder indentation lines*/
 .nav-folder.mod-root .nav-folder > .nav-folder-children {
     padding-left: var(--size-4-2);
-    margin: 0.9em;
+    margin-left: 0.9em;
     border-left: var(--nav-indentation-guide-width) solid var(--nav-indentation-guide-color);
 }
 
