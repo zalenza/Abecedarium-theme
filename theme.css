@@ -1144,7 +1144,7 @@ cite {
 
 /*tag pane edits - relationship lines*/
 .tag-container .tree-item-children {
-	margin-left:  1.3em;
+	margin-left:  0.9em;
 	border-left: 1px solid var(--nav-indentation-guide-color);
 }
 
@@ -1387,7 +1387,7 @@ body:not(.no-svg-replace) svg.right-triangle {
 /*file explorer folder indentation lines*/
 .nav-folder.mod-root .nav-folder > .nav-folder-children {
     padding-left: var(--size-4-2);
-    margin: 0 0 0 15px;
+    margin: 0.9em;
     border-left: var(--nav-indentation-guide-width) solid var(--nav-indentation-guide-color);
 }
 
