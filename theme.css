@@ -25,6 +25,8 @@ body {
     --accent-l: 57%;
     --link-decoration: none;
     --background-modifier-hover: var(--background-secondary);
+	--nav-item-padding: var(--size-4-1) var(--size-4-2) var(--size-4-1) var(--size-4-6);
+	--nav-item-parent-padding: 0em 0.5em .15em 0.5em; /*var(--nav-item-padding)*/
 }
 
 /* ======= DARK ============== */
@@ -382,9 +384,10 @@ body {
 }
 
 
+/*file explorer and tag pane icons - global, not positioning*/
 .nav-action-button > svg {
-    width : 14px;
-    height : 14px;
+    /*width : 1.15em;*/
+    height : 1.15em;
     color : var(--text-accent);
 }
 .nav-action-button.is-active {
@@ -586,6 +589,10 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 	/*padding: 0px 2px;*/
 	display: block; /*this was set to flex; made the tag count block too big*/
 }
+.tag-container {
+	/*padding: 10px 10px 10px 25px;*/
+	padding-left: 10px;
+}
 
 
 .nav-action-button.is-inactive > svg {
@@ -626,11 +633,15 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 }
 .search-result-container {
 	padding: 0px 4px 4px 4px;
+	margin-top: 10px;
 }
 .search-result-file-title {
 	font-size: 14px;
 	color: var(--text-accent);
 	border-radius: 0px;
+	/*line-height: 14px;*/
+	padding-top: 0px;
+	padding-bottom: 0px;
 }
 .search-result-file-matches {
 	color: var(--text-muted);
@@ -1108,8 +1119,6 @@ cite {
 /*=====================================*/
 
 
-
-
 /*settings dialog changes*/
 .modal.mod-settings {
     padding: 0;
@@ -1144,7 +1153,7 @@ cite {
 
 /*tag pane edits - relationship lines*/
 .tag-container .tree-item-children {
-	margin-left:  0.9em;
+	margin-left:  1.25em;
 	border-left: 1px solid var(--nav-indentation-guide-color);
 }
 
@@ -1153,9 +1162,18 @@ cite {
 }
 
 
-/*search pane and tag pane spacing*/
-.tree-item-self {
-	padding: 0px 6px 0px 20px;
+/*tag pane spacing*/
+.tag-container .tree-item-self {
+	padding: 3px 6px 0px 20px;
+}
+
+/*search pane spacing*/
+.nav-files-container .tree-item-self {
+	padding: 1px 6px 0px 20px;
+}
+/*backlinks pane spacing*/
+.backlink-pane .tree-item-self {
+	padding: 1px 6px 0px 20px;
 }
 
 /*main leaf borders*/
@@ -1164,40 +1182,7 @@ cite {
 	border-radius: 0;
 }
 
-/* fake admonition stuff, thank you @SlRvb */
 
-.sourcenote h6 {
-  padding-left: 30px;
-  background-color: var(--infobox-header);
-  margin-bottom: 0;
-  border-left: 3px solid var(--accent-middle);
-  padding: 10px;
-  font-family: Inter;
-  font-size: 1em
-}
-
-.sourcenote h6:before {
-  content: "\270E";
-  align: right;
-  padding-right: 10px;
-}
-.sourcenote h6 {
-  background-color: var(--background-secondary);
-}
-
-.sourcenote ul:not(ul ul) {
-  background-color: var(--background-secondary);
-  padding: 20px;
-  margin-block-start: 0;
-  border-left: 3px solid var(--text-accent);
-}
-.sourcenote ul li {
-  margin-left: 20px;
-  border-left: 0px solid var(--text-accent);
-}
-.sourcenote ul ul {
-  margin-left: -20px;
-}
 
 
 /*Dataview query results numbers*/
@@ -1306,6 +1291,10 @@ body:not(.no-svg-replace) svg.right-triangle {
 .tag-pane-tag {
 	line-height: 1.5em;
 }
+.tree-item-self.is-clickable {
+    /*padding: var(--nav-item-parent-padding);*/
+    padding-left: 25px;
+}
 
 /*make the "uncreated file" icon in the quick switcher more visible when highlighted*/
 .suggestion-item.mod-complex .suggestion-flair {
@@ -1360,15 +1349,16 @@ body:not(.no-svg-replace) svg.right-triangle {
     padding-left: 0px
 }
 
-.nav-buttons-container { /*this also affects the buttons in the file browser sidebar*/
-    display: flex;
+/*this also affects the buttons in the file browser sidebar*/
+.nav-buttons-container { 
+    /*display: flex;*/
     justify-content: left;
-    padding-bottom: 10px;
+/*    padding-bottom: 10px;
     padding-top: 5px;
     border-bottom: 1px solid var(--background-modifier-border);
-    margin-bottom: 2px;
+    margin-bottom: 2px;*/
     padding-left: .5em;
-    flex-wrap: wrap;
+   /* flex-wrap: wrap;*/
 }
 
 .embedded-backlinks .nav-buttons-container  {
@@ -1387,12 +1377,13 @@ body:not(.no-svg-replace) svg.right-triangle {
 /*file explorer folder indentation lines*/
 .nav-folder.mod-root .nav-folder > .nav-folder-children {
     padding-left: var(--size-4-2);
-    margin-left: 0.9em;
+    margin-left: 1.2em;
     border-left: var(--nav-indentation-guide-width) solid var(--nav-indentation-guide-color);
 }
 
+/*this only appears to change the Recent Files sidebar*/
 .nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title {
-    padding-left: 30px;
+    padding-left: 1.5em;
 }
 
 
@@ -1423,10 +1414,18 @@ body:not(.no-svg-replace) svg.right-triangle {
     background-color: var(--background-secondary-alt);
 }
 
+/*remove border underneath left sidebar toggle button*/
+.workspace-ribbon.mod-left:before {
+    border-bottom: none;
+}
+
+
 /*backlinks pane link text for not collapsed*/
 .search-result:not(.is-collapsed) .search-result-file-title {
     color: var(--text-accent);
 }
+
+
 
 /*===== fix top title =====*/
 .view-header-title {
