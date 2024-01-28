@@ -365,7 +365,7 @@ body {
 .nav-buttons-container {
     display: flex;
     justify-content: left;
-    padding-bottom: 0px;
+    padding-bottom: 8px;
     border-bottom: 1px solid var(--background-modifier-border);
     margin-bottom: 2px;
     padding-left: .5em;
