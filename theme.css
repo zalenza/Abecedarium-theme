@@ -36,7 +36,7 @@ body {
 	--background-modifier-border: #282931;  /*#303030*/
 	--background-primary-alt: #171717; 
 	--background-secondary: #1C1F24;          /*#1E2023*/
-	--background-secondary-alt: #111212;       /*#101010*/
+	--background-secondary-alt: #0f1112;       /*#101010*/
 	--background-modifier-box-shadow: rgba(0,0,0,0.3);
 	--background-modifier-success: #197300;
 	--background-nav-alt: rgba(62,147,216,.1);
@@ -1461,6 +1461,7 @@ ul > li.task-list-item[data-task="x"], ul > li.task-list-item[data-task="X"] {
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"], .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="X"] {
     color: var(--text-faint);
 }
+
 /*right-click menu*/
 .menu {
     -webkit-app-region: no-drag;
