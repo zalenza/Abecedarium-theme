@@ -1461,3 +1461,17 @@ ul > li.task-list-item[data-task="x"], ul > li.task-list-item[data-task="X"] {
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"], .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="X"] {
     color: var(--text-faint);
 }
+/*right-click menu*/
+.menu {
+    -webkit-app-region: no-drag;
+    padding: var(--size-2-3);
+    border: 1px solid var(--background-modifier-border-hover);
+    background-color: var(--background-primary);
+    border-radius: var(--radius-m);
+    box-shadow: var(--shadow-s);
+    position: fixed;
+    z-index: var(--layer-menu);
+    user-select: none;
+    max-height: calc(100% - var(--header-height));
+    overflow: hidden;
+}
