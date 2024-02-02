@@ -24,7 +24,7 @@ body {
     --accent-s: 100%;
     --accent-l: 57%;
     --link-decoration: none;
-    --background-modifier-hover: var(--background-secondary);
+    --background-modifier-hover: var(--background-secondary-alt);
 	--nav-item-padding: var(--size-4-1) var(--size-4-2) var(--size-4-1) var(--size-4-6);
 	--nav-item-parent-padding: 0em 0.5em .15em 0.5em; /*var(--nav-item-padding)*/
 }
@@ -582,7 +582,7 @@ body:not(.is-grabbing) .nav-folder-title:hover {
     background-color: var(--background-secondary-alt);
     line-height: 1.3em;
     border-radius: 3px;
-    padding: 1px 4px;
+    padding: 2px 4px;
 }
 
 .tree-item-flair-outer {
