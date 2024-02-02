@@ -24,7 +24,7 @@ body {
     --accent-s: 100%;
     --accent-l: 57%;
     --link-decoration: none;
-    --background-modifier-hover: var(--background-secondary-alt);
+    --background-modifier-hover: var(--background-secondary);
 	--nav-item-padding: var(--size-4-1) var(--size-4-2) var(--size-4-1) var(--size-4-6);
 	--nav-item-parent-padding: 0em 0.5em .15em 0.5em; /*var(--nav-item-padding)*/
 }
