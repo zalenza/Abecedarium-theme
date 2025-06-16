@@ -30,6 +30,7 @@ body {
 	--p-spacing: 0.75em;
 	--link-decoration-hover: none;
 	--embed-padding: 0 0 0 var(--size-4-6);
+	--heading-spacing: calc(var(--p-spacing));
 }
 
 /* ======= DARK ============== */
@@ -569,9 +570,17 @@ body:not(.is-grabbing) .nav-folder-title:hover {
     width: 0px;
     height: 100%;
 }
-/* ====== font size headers =========*/
-.cm-s-obsidian .cm-header-1, .markdown-preview-view h1 {
-    margin: 0px 0px 00px 0px;
+
+/* ====== HEADERS =========*/
+
+/*fixing spacing below header*/
+h1, h2, h3, h4, h5, h6 {
+    margin-block-start: var(--p-spacing);
+    margin-block-end: var(--p-spacing);
+}
+
+.cm-s-obsidian .cm-line.HyperMD-header + .cm-line:not(.HyperMD-header):not(:has(>br:only-child)) {
+    padding-top: var(--p-spacing); /*var(--p-spacing)*/
 }
 
 
