@@ -149,7 +149,7 @@ body {
 
 /*styling the different modes - editor, source, live preview - to look the same*/
 .view-content > .markdown-source-view.mod-cm6 > .cm-editor > .cm-scroller {
-    padding: 30px 10px 30px 45px;
+    padding: 30px 10px 30px 30px;
 }
 .markdown-rendered p {
     margin-block-start: var(--p-spacing); /*var(--p-spacing)*/
@@ -372,16 +372,17 @@ body {
     flex-wrap: wrap;
 }
 
-.is-mobile .nav-buttons-container {
+/*.is-mobile .nav-buttons-container {
     display: flex;
     justify-content: center;
-}
+}*/
 
-/*.is-mobile .nav-action-button > svg {
+.is-mobile .nav-action-button > svg {
     width : 24px;
     height : 24px;
     margin: 5px;
-}*/
+}
+
 
 
 /*file explorer and tag pane icons - global, not positioning*/
@@ -505,7 +506,10 @@ body:not(.is-grabbing) .nav-folder-title:hover {
   padding: 1px 14px 0px 30px;
 }
 
-
+.is-mobile .tree-item-self {
+	font-size: 20px !important;
+	line-height: 24px !important;
+}
 
 /* highlight the name of the open file in the explorer */
 .nav-file-title.is-active {
@@ -522,7 +526,7 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 /* vault name */
 .nav-folder.mod-root > .nav-folder-title {
   padding-left: 6px;
-  font-size: 14px; 
+  font-size: 20px; 
   /*font-weight: bolder;*/
   top: -.25em;
   padding-top: 0.5em;
@@ -532,25 +536,15 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 
 
 /* ===== smaller view-actions icons ===== */
-.view-action > svg {
-    width : 15px;
-    height : 15px;
-}
-.view-header-icon > svg {
-    width : 15px;
-    height : 15px;
-}
 .workspace-tab-header-inner-icon > svg {
     width : 15px;
     height : 15px;
 }
+
 /* ===== selection highlight in quick switcher ==== */
 .suggestion-item.is-selected {
 	background-color: var(--text-accent-hover-dark);
 }
-
-
-
 
 /* ====== scrollbars:no rounded corners =========*/
 ::-webkit-scrollbar-thumb {
@@ -623,52 +617,32 @@ h1, h2, h3, h4, h5, h6 {
 
 /* a bit more padding on the left side in preview mode*/
 .markdown-preview-view {
-	padding: 30px 10px 30px 45px;
+	padding: 30px 10px 30px 30px;
 }
 .is-mobile .markdown-preview-view {
-	padding: 30px 10px 30px 45px;
+	padding: 20px 10px 30px 20px;
 }
 
 
 /*===== backlink pane smaller fonts=======*/
-.side-dock-collapsible-section-header {
-	font-size: 12px;
-	padding: 3px 14px 0 34px;
-	user-select: none;
-	cursor: pointer;
-	position: relative;
-}
-.search-result-container {
-	padding: 0px 4px 4px 4px;
-	margin-top: 10px;
-}
 .search-result-file-title {
 	font-size: 14px;
 	color: var(--text-accent);
 	border-radius: 0px;
-	/*line-height: 14px;*/
-	padding-top: 0px;
-	padding-bottom: 0px;
 }
-.search-result-file-matches {
-	color: var(--text-muted);
-	font-size: 12px;
-	line-height: 20px;
-	margin-bottom: 5px;
-	padding: 2px 0;
-}
-.search-result-file-match:not(:first-child) {
-	margin-top: 0px;
-}
-.theme-light .search-result-file-matched-text {
-	color: var(--background-primary);
-	background-color: var(--text-highlight-bg);
-}
-.theme-dark .search-result-file-matched-text {
-	color: var(--text-normal);
-	background-color: var(--text-highlight-bg);
+.is-mobile .search-result-file-title {
+	font-size: 20px;
 }
 
+.search-result-file-matches {
+	padding: 2px 0;
+	box-shadow: none;
+	background-color: var(--background-primary);
+}
+.search-result-file-match:not(:first-child) {
+	/*margin-top: 0px;*/
+	background-color: var(--background-primary);
+}
 
 /* =============== highlight text color ==================*/
 .theme-light .markdown-preview-view mark {
@@ -1301,6 +1275,13 @@ body:not(.no-svg-replace) .tree-item-self .tree-item-icon > svg.right-triangle {
     fill: var(--text-muted);
     margin-top: -4px;
 }
+/*adjusting carrot/triangle size on mobile*/
+.is-mobile, body:not(.no-svg-replace) .tree-item-self .tree-item-icon > svg.right-triangle {
+    /*height: 22px;*/
+    /*width: 22px;*/
+    /*fill: var(--text-muted);*/
+    /*margin-top: -4px;*/
+}
 
 body:not(.no-svg-replace) svg.right-triangle {
     color: var(--text-faint);
@@ -1316,6 +1297,7 @@ body:not(.no-svg-replace) svg.right-triangle {
     margin-left: -16px !important;
     margin-top: 0px;
 }
+
 
 /*tag pane line height*/
 .tag-pane-tag {
@@ -1388,7 +1370,7 @@ body:not(.no-svg-replace) svg.right-triangle {
 }
 
 .embedded-backlinks .nav-buttons-container  {
-    position: ;
+    /*position: ;*/
     right: /*350px*/;
     top: -40px;
     z-index: 1;
@@ -1417,7 +1399,7 @@ body:not(.no-svg-replace) svg.right-triangle {
 /*top icon / sidebar ribbon*/
 .workspace-ribbon {
     width: var(--ribbon-width);
-    flex: 0 0 var(--ribbon-width);
+    /*flex: 0 0 var(--ribbon-width);*/
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -1427,17 +1409,6 @@ body:not(.no-svg-replace) svg.right-triangle {
     padding: var(--ribbon-padding);
     gap: var(--size-4-1);
     border-right: var(--divider-width) solid var(--divider-color);
-}
-
-.sidebar-toggle-button {
-    height: calc(var(--header-height) - 1px);
-    display: flex;
-    justify-content: center;
-    padding: var(--size-4-2) 0 7px 0;
-    -webkit-app-region: no-drag;
-    --icon-size: var(--icon-l);
-    --icon-stroke: var(--icon-l-stroke-width);
-    background-color: var(--background-secondary-alt);
 }
 
 /*remove border underneath left sidebar toggle button*/
