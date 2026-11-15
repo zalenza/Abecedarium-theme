@@ -65,7 +65,7 @@ body {
 	--scrollbar-active-thumb-bg: rgba(62,147,216,0.8); /*rgba(255,255,255,0.2)*/
 	--scrollbar-bg: rgba(255,255,255,1);
 	--scrollbar-thumb-bg: rgba(50,50,50,.8);	/*rgba(81,144,175,0.2)*/
-	--accent-strong: #EC5151; /*#EC7272*/ /*#ec0d0d*/ #EC5151
+	--accent-strong: #EC5151; /*#EC7272*/ /*#ec0d0d*/
 	--color-H1: rgb(255,255,255);
 	--color-H2: rgb(220,220,220,.2);
 	--color-H3: rgb(200,200,200,.4);
