@@ -37,35 +37,35 @@ body {
 /* ======= DARK ============== */
 .theme-dark {
 	--opacity-translucency: .8;
-	--background-primary: #131517;   /*#161718*/
-	--background-modifier-border: #282931;  /*#303030*/
-	--background-primary-alt: #0f1112; /*#171717*/
-	--background-secondary: #1C1F24;          /*#1E2023*/
-	--background-secondary-alt: #0f1112;       /*#101010*/
+	--background-primary: #131517;   
+	--background-modifier-border: #282931;  
+	--background-primary-alt: #0f1112; 
+	--background-secondary: #1C1F24;          
+	--background-secondary-alt: #0f1112;      
 	--background-modifier-box-shadow: rgba(0,0,0,0.3);
 	--background-modifier-success: #197300;
 	--background-nav-alt: rgba(62,147,216,.1);
 	--text-accent: #3e93d8;  
 	--text-accent-hover: #3378e0; 
 	--text-accent-hover-dark: #1052b5; 
-	--text-normal: #ECEDEE; /*#dcddde*/ 
-	--text-muted: #8B959A;        /*#999*/
-	--text-faint: #5D5F67;  /*#666*/
+	--text-normal: #ECEDEE; 
+	--text-muted: #8B959A;       
+	--text-faint: #5D5F67;  
 	--text-error: #ff3333; 
 	--text-error-hover: #990000;
 	--text-on-accent: #dcddde;
 	--text-selection: rgba(6,66,113,0.5);
-	--text-highlight-bg: #ec0d0d; /*#990000*/ 
-	--interactive-normal: #1C1F24; /*#2a2a2a*/
+	--text-highlight-bg: #ec0d0d; 
+	--interactive-normal: #1C1F24; 
 	--interactive-hover: #303030;
 	--interactive-accent: #3378e0;
-	--interactive-accent-rgb: 38, 157, 255;	/*rgb(38,157,255)*/
+	--interactive-accent-rgb: 38, 157, 255;	
 	--interactive-accent-hover: #4e8ae4;
 	--interactive-accent-hover-dark: #0f56bf;
-	--scrollbar-active-thumb-bg: rgba(62,147,216,0.8); /*rgba(255,255,255,0.2)*/
+	--scrollbar-active-thumb-bg: rgba(62,147,216,0.8);
 	--scrollbar-bg: rgba(255,255,255,1);
-	--scrollbar-thumb-bg: rgba(50,50,50,.8);	/*rgba(81,144,175,0.2)*/
-	--accent-strong: #EC5151; /*#EC7272*/ /*#ec0d0d*/
+	--scrollbar-thumb-bg: rgba(50,50,50,.8);	
+	--accent-strong: #EC5151; 
 	--color-H1: rgb(255,255,255);
 	--color-H2: rgb(220,220,220,.2);
 	--color-H3: rgb(200,200,200,.4);
@@ -84,7 +84,7 @@ body {
 	--background-primary: #FFFFFF;
 	--background-primary-alt: #f0f2f5;
 	--background-secondary: #f2f3f5;
-	--background-secondary-alt: #e3e5e8; /*#e3e5e8*/
+	--background-secondary-alt: #e3e5e8;
 	--background-accent: #fff;
 	--background-modifier-border: #ddd;
 	--background-modifier-form-field: #fff;
@@ -97,22 +97,22 @@ body {
 	--background-modifier-cover: rgba(0,0,0,0.1); 	/* title bar */
 	--background-nav-alt: rgba(38,135,255,.1);
 	--text-accent: #269dff; 	/* link color */
-	--text-accent-hover: #66baff;	/*#2da4ff*/
+	--text-accent-hover: #66baff;	
 	--text-accent-hover-dark: #269dff;	
-	--text-normal: #2e3338; #269DFF
+	--text-normal: #2e3338; 
 	--text-muted: #6e6e6e;
 	--text-faint: #999999;
 	--text-error: #ce2222;
 	--text-error-hover: #cb2c2;
-	--text-highlight-bg: #FF3737; /*rgba(240, 255, 82, 0.76); */ /*#FF3737*/
+	--text-highlight-bg: #FF3737; 
 	--text-selection: rgba(134,202,255,0.5);
-	--text-on-accent: #2e3338;	/* #f2f2f2 */
+	--text-on-accent: #2e3338;	
 	--interactive-normal: #f2f3f5;
 	--interactive-hover: #e9e9e9;
 	--interactive-accent-hover: #2287d4;
 	--interactive-accent: #2da4ff;		/*this is for calendar day highlight, nested tag highlight, active note highlight*/
-	--interactive-accent-rgb: 38, 157, 255; /*rgb(34,182,226)*/ /*rgb(38,157,255)*/
-    --scrollbar-active-thumb-bg: rgba(38,157,255,0.8);		/*rgb(5,4,39); the color when clicked */
+	--interactive-accent-rgb: 38, 157, 255; 
+    --scrollbar-active-thumb-bg: rgba(38,157,255,0.8);		
     --scrollbar-bg: rgba(100,100,100,0);
     --scrollbar-thumb-bg: #e3e5e8;
 	--accent-strong: #ff6666;
