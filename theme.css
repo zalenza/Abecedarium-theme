@@ -31,6 +31,7 @@ body {
 	--link-decoration-hover: none;
 	--embed-padding: 0 0 0 var(--size-4-6);
 	--heading-spacing: calc(var(--p-spacing));
+	--bases-table-group-background: var(--background-secondary);
 }
 
 /* ======= DARK ============== */
@@ -38,7 +39,7 @@ body {
 	--opacity-translucency: .8;
 	--background-primary: #131517;   /*#161718*/
 	--background-modifier-border: #282931;  /*#303030*/
-	--background-primary-alt: #171717; 
+	--background-primary-alt: #0f1112; /*#171717*/
 	--background-secondary: #1C1F24;          /*#1E2023*/
 	--background-secondary-alt: #0f1112;       /*#101010*/
 	--background-modifier-box-shadow: rgba(0,0,0,0.3);
@@ -55,15 +56,15 @@ body {
 	--text-on-accent: #dcddde;
 	--text-selection: rgba(6,66,113,0.5);
 	--text-highlight-bg: #ec0d0d; /*#990000*/ 
-	--interactive-normal: #2a2a2a;
+	--interactive-normal: #1C1F24; /*#2a2a2a*/
 	--interactive-hover: #303030;
 	--interactive-accent: #3378e0;
 	--interactive-accent-rgb: 38, 157, 255;	/*rgb(38,157,255)*/
 	--interactive-accent-hover: #4e8ae4;
 	--interactive-accent-hover-dark: #0f56bf;
 	--scrollbar-active-thumb-bg: rgba(62,147,216,0.8); /*rgba(255,255,255,0.2)*/
-	--scrollbar-bg: rgba(255,255,255,0);
-	--scrollbar-thumb-bg: rgb(20,20,20);	/*rgba(81,144,175,0.2)*/
+	--scrollbar-bg: rgba(255,255,255,1);
+	--scrollbar-thumb-bg: rgba(50,50,50,.8);	/*rgba(81,144,175,0.2)*/
 	--accent-strong: #EC5151; /*#EC7272*/ /*#ec0d0d*/ #EC5151
 	--color-green: #4a8069; 
 	--color-orange: #de9d07; /*#f67c09*/
@@ -103,7 +104,7 @@ body {
 	--background-nav-alt: rgba(38,135,255,.1);
 	--text-accent: #269dff; 	/* link color */
 	--text-accent-hover: #66baff;	/*#2da4ff*/
-	--text-accent-hover-dark: #4e8ae4;	
+	--text-accent-hover-dark: #269dff;	
 	--text-normal: #2e3338; #269DFF
 	--text-muted: #6e6e6e;
 	--text-faint: #999999;
@@ -139,13 +140,13 @@ body {
 
 
 /*change overall font size for both themes*/
-.theme-light pre {
+/*.theme-light pre {
 	font-size: 17px !important;
 }
-
-.theme-dark pre {
+*/
+/*.theme-dark pre {
 	font-size: 17px !important;
-}
+}*/
 
 /*styling the different modes - editor, source, live preview - to look the same*/
 .view-content > .markdown-source-view.mod-cm6 > .cm-editor > .cm-scroller {
@@ -362,15 +363,7 @@ body {
 .nav-header {
     padding: 10px 10px 4px 8px;
 }
-.nav-buttons-container {
-    display: flex;
-    justify-content: left;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--background-modifier-border);
-    margin-bottom: 2px;
-    padding-left: .5em;
-    flex-wrap: wrap;
-}
+
 
 /*.is-mobile .nav-buttons-container {
     display: flex;
@@ -545,6 +538,7 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 .suggestion-item.is-selected {
 	background-color: var(--text-accent-hover-dark);
 }
+
 
 /* ====== scrollbars:no rounded corners =========*/
 ::-webkit-scrollbar-thumb {
@@ -759,32 +753,42 @@ h1, h2, h3, h4, h5, h6 {
 /*==== add mods below =====*/
 
 /*==== CODE BLOCK MODIFICATIONS ====*/
-.markdown-source-view.mod-cm6 .code-block-flair {
-    display: none;
+
+/* Code blocks in editor (live editing mode, CM6) */
+.markdown-source-view.mod-cm6 .cm-scroller .cm-line.CodeMirror-line {
+  white-space: pre;       /* prevent wrapping in code blocks */
 }
-.theme-light pre {
-	background: #f0f2f5; 
-	text-shadow: 0 0px white; 
-	font-family: var(--font-monospace);
-	text-align: left;
-	/*white-space: pre;*/ /* this controls code block word wrap */
-	word-spacing: normal;
-	word-break: normal;
-	word-wrap: normal;
-	line-height: 1.1;
-	font-size: .85em;
-	/*overflow-y: auto;*/
+/* Live Preview (Editor) */
+.markdown-source-view.mod-cm6 .cm-embed-block.HyperMD-codeblock {
+  overflow-x: auto;        /* one scrollbar per block */
 }
-.theme-dark pre {
-	font-size: 15px;
-	line-height: 1;
-	border-radius: 0px;
-	line-height: 1.1;
+
+/* Live Preview fenced code blocks */
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+  white-space: pre;       /* preserve spacing, disable wrap */
+  /*overflow-x: auto;*/
+  line-height: 1.5em;
+}
+
+/* Ensure the code block container scrolls if needed */
+.markdown-source-view.mod-cm6 .cm-scroller {
+  overflow-x: auto;
+}
+.markdown-rendered code {
+    color: var(--code-normal);
+    font-family: var(--font-monospace);
+    background-color: var(--code-background);
+    border-radius: var(--code-radius);
+    font-size: var(--code-size);
+    white-space: pre;
+    padding: 0.15em 0.3em;
+    border: var(--code-border-width) solid var(--code-border-color);
+    -webkit-box-decoration-break: clone;
 }
 .markdown-preview-view code { 		/*this changes code block color*/
 	/*color: var(--text-normal);*/ 		
-	line-height: 1;
-	font-size: 15px;
+	line-height: 1.5em !important;
+	font-size: 14px;
 	background-color: var(--background-secondary);
 }
 
@@ -1111,6 +1115,14 @@ cite {
   margin-right: -50%;
 }
 
+.markdown-preview-view.readable .markdown-preview-sizer,
+.markdown-source-view.mod-cm6.readable .cm-content {
+  max-width: 70em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 /*changes note background color for Project Delivery Models note*/
 .theme-light .orangeback.markdown-preview-view {
   background-color: #fff4e6;
@@ -1318,18 +1330,44 @@ body:not(.no-svg-replace) svg.right-triangle {
 .nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title {
     padding-left: 20px;
 }
-/*sidebar panel tabs*/
-.mod-left-split .workspace-tab-header-container-inner, .mod-right-split .workspace-tab-header-container-inner {
-    padding: 0px 0px 0px;
-    /*margin: 6px 0 0 0;*/
-    /*gap: 3px;*/
-    /*background-color: var(--background-secondary);*/
+/*sidebar panel tabs, note tabs*/
+/*===========================TEST 2=====================================*/
+/*.workspace-tab-header-container .workspace-tab-header.is-active {
+    color: var(--tab-text-color-focused-active);
+    margin-bottom: -10px;
+    margin-top: -10px;
+    padding-top: 10px;
 }
-
-/*.workspace-tab-header-inner {
-    border-radius: 0px;
-    background-color: var(--background-secondary);
+.workspace-tab-header-container .workspace-tab-header:not(.is-active):hover {
+    background-color: var(--background-modifier-hover);
+    margin-bottom: -10px;
+    margin-top: -10px;
+    padding-top: 10px;
 }*/
+/*===========================TEST 1==============================================*/
+/*.workspace-tab-header-inner {
+    padding: 0px 20px;
+    height: 135%;
+    display: flex;
+}
+.workspace-tab-header-container .workspace-tab-header.is-active {
+    border-radius: 0px;
+    padding-bottom: 13px;
+    margin-bottom: -10px;
+}
+body.is-focused .mod-active .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner-icon, body.is-focused .mod-active .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+    color: var(--tab-text-color-focused-active-current);
+    margin-bottom: 5px;
+}
+.workspace .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner-close-button {
+    pointer-events: all;
+    opacity: 1;
+    margin-bottom: 5px;
+}
+.workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-close-button {
+    margin-bottom: 5px;	
+}*/
+/*========================================================================================*/
 
 /*fix for SRS padding*/
 .modal {
@@ -1360,13 +1398,12 @@ body:not(.no-svg-replace) svg.right-triangle {
 /*this also affects the buttons in the file browser sidebar*/
 .nav-buttons-container { 
     /*display: flex;*/
-    justify-content: left;
-/*    padding-bottom: 10px;
-    padding-top: 5px;
+    justify-content: center;
+    padding-bottom: 8px;
     border-bottom: 1px solid var(--background-modifier-border);
-    margin-bottom: 2px;*/
-    padding-left: .5em;
-   /* flex-wrap: wrap;*/
+    margin-bottom: 2px;
+    flex-wrap: wrap;
+    gap: .5em;
 }
 
 .embedded-backlinks .nav-buttons-container  {
@@ -1468,7 +1505,7 @@ ul > li.task-list-item[data-task="x"], ul > li.task-list-item[data-task="X"] {
     border-radius: var(--radius-m);
     box-shadow: var(--shadow-s);
     position: fixed;
-    z-index: var(--layer-menu);
+/*    z-index: var(--layer-menu);*/  /*turned this off 10/7/2025, causes stacking issue with Bases menus*/
     user-select: none;
     max-height: calc(100% - var(--header-height));
     overflow: hidden;
