@@ -66,7 +66,6 @@ body {
 	--scrollbar-bg: rgba(255,255,255,1);
 	--scrollbar-thumb-bg: rgba(50,50,50,.8);	/*rgba(81,144,175,0.2)*/
 	--accent-strong: #EC5151; /*#EC7272*/ /*#ec0d0d*/ #EC5151
-	--color-orange: #de9d07; /*#f67c09*/
 	--color-H1: rgb(255,255,255);
 	--color-H2: rgb(220,220,220,.2);
 	--color-H3: rgb(200,200,200,.4);
@@ -76,9 +75,6 @@ body {
 	--graph-node-fill-OP1: #3e93d8;
 	--graph-node-fill-OP2: #91B8D7; 
 	--graph-node-fill-yellow: #ffcf00; 
-	--color-yellow-bright: #FBFF00;
-	--color-purple: #b352e0;
-	--color-purple2: #5252e0;
 	--blockquote-background-color: var(--background-secondary);
 }
 
@@ -120,7 +116,6 @@ body {
     --scrollbar-bg: rgba(100,100,100,0);
     --scrollbar-thumb-bg: #e3e5e8;
 	--accent-strong: #ff6666;
-	--color-orange: #EFB220; /*#de9d07*/
 	--color-H1: rgb(0,0,0); 
 	--color-H2: rgb(70,70,70,.5);
 	--color-H3: rgb(120,120,120,.5);
