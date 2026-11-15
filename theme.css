@@ -871,7 +871,6 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /*internal and external link underline*/
-}
 .theme-light.links-ext-on .external-link,
 .external-link {
   text-decoration:none;
